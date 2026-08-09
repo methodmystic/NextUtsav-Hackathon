@@ -1,0 +1,80 @@
+[
+  {
+    "id": "c1",
+    "name": "GDGC DYPCOE",
+    "instagramId": "gdgc.dypcoe",
+    "category": "Technology",
+    "bio": "Empowering tech enthusiasts at DYPCOE — fostering innovation & learning. (Official Google Developer Groups on Campus chapter)",
+    "followersCount": 1795,
+    "memberCount": 210,
+    "logoUrl": "",
+    "coverUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&q=80",
+    "collegeId": "c_dypcoe",
+    "collegeName": "D Y Patil College of Engineering, Akurdi",
+    "description": "Google Developer Groups on Campus (GDGC) DYPCOE is a community group for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDG On Campus, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.",
+    "tags": [
+      "Technology",
+      "Google",
+      "Development",
+      "Open Source",
+      "Programming"
+    ],
+    "achievements": [
+      "Best Tech Event of the Year 2023",
+      "Over 500+ attendees in annual hackathon"
+    ],
+    "recentPosts": []
+  },
+  {
+    "id": "c2",
+    "name": "ITESA DYPCOE",
+    "instagramId": "itesa.dyp",
+    "category": "Technology",
+    "bio": "Create | Explore | Commit. IT department's student association.",
+    "followersCount": 733,
+    "memberCount": 150,
+    "logoUrl": "",
+    "coverUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80",
+    "collegeId": "c_dypcoe",
+    "collegeName": "D Y Patil College of Engineering, Akurdi",
+    "description": "Information Technology Engineering Student Association (ITESA) is a student chapter committed to creating an environment for IT students to explore and commit to technological advancement. We organize workshops, seminars, and hackathons.",
+    "tags": [
+      "IT",
+      "Engineering",
+      "Association",
+      "Workshops",
+      "Tech"
+    ],
+    "achievements": [
+      "Successfully organized National Level Hackathon",
+      "Active alumni mentoring program"
+    ],
+    "recentPosts": []
+  },
+  {
+    "id": "c3",
+    "name": "ACES DYPCOE",
+    "instagramId": "aces_dypcoe",
+    "category": "Technology",
+    "bio": "Association of Computer Engineering Students. Promoting open-source and computer science excellence.",
+    "followersCount": 1200,
+    "memberCount": 180,
+    "logoUrl": "",
+    "coverUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+    "collegeId": "c_dypcoe",
+    "collegeName": "D Y Patil College of Engineering, Akurdi",
+    "description": "The Association of Computer Engineering Students (ACES) aims to promote computer science education and open source contribution. We manage various open-source projects on GitHub and host coding competitions throughout the year.",
+    "tags": [
+      "Computer Science",
+      "Open Source",
+      "Coding",
+      "Community",
+      "Software Engineering"
+    ],
+    "achievements": [
+      "Top contributor to DYPCOE open source projects",
+      "Organized 'Code Fiesta' 2024"
+    ],
+    "recentPosts": []
+  }
+]

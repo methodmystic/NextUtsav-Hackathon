@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextUtsav Mobile Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Urbanist', sans-serif; background: #000; color: #fff; margin: 0; display: flex; justify: center; align-items: center; height: 100vh; overflow: hidden; }
+        .phone-container { width: 375px; height: 812px; background: #121212; border: 8px solid #333; border-radius: 40px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
+        .notch { width: 150px; height: 25px; background: #333; position: absolute; top: 0; left: 50%; transform: translateX(-50%); border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; z-index: 10; }
+        .header { padding: 40px 20px 10px; background: #121212; display: flex; justify-content: space-between; align-items: center; }
+        .search-bar { background: #1e1e1e; padding: 10px 15px; border-radius: 12px; margin: 10px 20px; font-size: 14px; color: #888; display: flex; align-items: center; gap: 10px; }
+        .feed { flex: 1; overflow-y: auto; padding: 0 15px; }
+        .post-card { background: #1e1e1e; border-radius: 20px; padding: 15px; margin-bottom: 20px; }
+        .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .post-image { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 12px; }
+        .nav-bar { display: flex; justify-content: space-around; padding: 15px; background: #121212; border-top: 1px solid #222; }
+        .nav-icon { fill: #888; width: 24px; }
+        .nav-active { fill: #6366f1; }
+        .status-bar { padding: 10px 30px; display: flex; justify-content: space-between; font-size: 12px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="notch"></div>
+        <div class="status-bar">
+            <span>9:41</span>
+            <div class="flex gap-2">
+                <span>📶</span>
+                <span>🔋</span>
+            </div>
+        </div>
+        <div class="header">
+            <h1 class="text-2xl font-black text-indigo-500">NextUtsav</h1>
+            <div class="flex gap-4">
+                <span>🔔</span>
+                <span>💬</span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <span>🔍</span>
+            <span>Search campus events...</span>
+        </div>
+        <div class="feed" id="feed">
+            <div class="p-8 text-center text-zinc-500">Loading Buzz Feed...</div>
+        </div>
+        <div class="nav-bar">
+            <span class="nav-active">🏠</span>
+            <span>🧩</span>
+            <span>🚀</span>
+            <span>🏅</span>
+            <span>👤</span>
+        </div>
+    </div>
+
+    <script>
+        async function fetchPosts() {
+            try {
+                const res = await fetch('http://localhost:5000/api/posts');
+                const data = await res.json();
+                const feed = document.getElementById('feed');
+                feed.innerHTML = '';
+                
+                data.data.forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'post-card';
+                    card.innerHTML = `
+                        <div class="post-header">
+                            <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center font-bold">
+                                ${post.clubId?.name?.charAt(0) || 'C'}
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm">${post.clubId?.name || 'Campus Updates'}</div>
+                                <div class="text-xs text-zinc-500">${new Date(post.createdAt).toLocaleDateString()}</div>
+                            </div>
+                        </div>
+                        <div class="text-sm mb-3">${post.content}</div>
+                        ${post.imageUrl ? `<img src="${post.imageUrl}" class="post-image" />` : ''}
+                        <div class="flex gap-6 text-sm text-zinc-400">
+                            <span>❤️ ${post.likesCount}</span>
+                            <span>💬 12</span>
+                            <span>🚀</span>
+                        </div>
+                    `;
+                    feed.appendChild(card);
+                });
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        fetchPosts();
+        setInterval(fetchPosts, 3000); // Polling for the demo
+    </script>
+</body>
+</html>
