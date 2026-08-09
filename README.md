@@ -2,9 +2,6 @@
 
 A production-ready Flutter mobile application for discovering, managing, and participating in college clubs, events, and extracurricular activities.
 
-## 📱 App Demo
-![NextUtsav Demo Video](assets/app_demo.webp)
-
 ## 📸 Screenshots
 <div style="display: flex; gap: 10px;">
   <img src="assets/app_home.png" alt="Home Screen" width="300" />
