@@ -13,9 +13,12 @@
 
 ## 📸 Snapshots
 
-<div align="center" style="display: flex; gap: 15px; justify-content: center;">
-  <img src="assets/app_home.png" alt="Home Screen" width="350" />
-  <img src="assets/app_events.png" alt="Events Screen" width="350" />
+<div align="center">
+  <img src="assets/screenshots/screenshot_home.jpg" alt="Campus Buzz - Home Feed" width="200" />
+  <img src="assets/screenshots/screenshot_clubs.jpg" alt="Clubs Hub" width="200" />
+  <img src="assets/screenshots/screenshot_hackhub_discovery.jpg" alt="Hackathon Hub - Discovery" width="200" />
+  <img src="assets/screenshots/screenshot_hackhub_teammates.jpg" alt="Hackathon Hub - Teammates" width="200" />
+  <img src="assets/screenshots/screenshot_profile.jpg" alt="Student Center - Profile" width="200" />
 </div>
 
 <br>
